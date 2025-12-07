@@ -66,11 +66,11 @@ FEATURE_COLS = [
 
 # MRT "station" options – grouped by region, but still showing example station names
 MRT_STATIONS = {
-    "Central (e.g. Bishan, Toa Payoh, City Hall)": {"region": "Central"},
-    "North (e.g. Yishun, Woodlands)": {"region": "North"},
-    "East (e.g. Bedok, Tampines, Pasir Ris)": {"region": "East"},
-    "North-East (e.g. Hougang, Punggol, Sengkang)": {"region": "North-East"},
-    "West (e.g. Jurong East, Clementi, Boon Lay)": {"region": "West"},
+    "Central (e.g. Bishan, Toa Payoh, City Hall, Orchard, Dhoby Ghaut)": {"region": "Central"},
+    "North (e.g. Yishun, Woodlands, Sembawang)": {"region": "North"},
+    "East (e.g. Bedok, Tampines, Pasir Ris, Paya Lebar, Geylang)": {"region": "East"},
+    "North-East (e.g. Hougang, Punggol, Sengkang, Serangoon, Kovan)": {"region": "North-East"},
+    "West (e.g. Jurong East, Jurong West, Clementi, Boon Lay, Bukit Batok, Bukit Panjang)": {"region": "West"},
 }
 
 
@@ -140,7 +140,7 @@ with st.form("price_form"):
         floor_area_sqft = st.number_input(
             "Floor area (sqft)",
             min_value=300.0,
-            max_value=2000.0,
+            max_value=2500.0,   # was 2000.0 but some units are larger hence changed to 2500
             value=1000.0,
             step=10.0,
         )
