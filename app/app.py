@@ -163,7 +163,7 @@ with st.form("price_form"):
         )
 
         mall_within_500m = st.number_input(
-            "Shopping malls within 500m (count)",
+            "Shopping malls within 2km (count)",
             min_value=0,
             max_value=5,
             value=1,
